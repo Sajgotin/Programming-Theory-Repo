@@ -11,7 +11,10 @@ public class Enemy_Assassin : Enemy
         Hp = 30;
         Dmg = 120;
         Def = 10;
+    }
 
+    private void OnMouseDown()
+    {
         Debug.Log("HP: " + Hp + " DMG: " + Dmg + " DEF: " + Def + " Class: " + CharacterClass);
         Attack();
         Guard();

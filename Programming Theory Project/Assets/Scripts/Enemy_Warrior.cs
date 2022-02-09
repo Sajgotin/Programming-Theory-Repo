@@ -11,7 +11,10 @@ public class Enemy_Warrior : Enemy
         Hp = 150;
         Dmg = 80;
         Def = 50;
+    }
 
+    private void OnMouseDown()
+    {
         Debug.Log("HP: " + Hp + " DMG: " + Dmg + " DEF: " + Def + " Class: " + CharacterClass);
         Attack();
         Guard();

@@ -10,8 +10,11 @@ public class Enemy_Rogue : Enemy
         CharacterClass = "Rogue";
         Hp = 50;
         Dmg = 50;
-        Def = 25;
+        Def = 25;      
+    }
 
+    private void OnMouseDown()
+    {
         Debug.Log("HP: " + Hp + " DMG: " + Dmg + " DEF: " + Def + " Class: " + CharacterClass);
         Attack();
         Guard();
