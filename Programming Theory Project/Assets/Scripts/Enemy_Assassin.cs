@@ -13,20 +13,13 @@ public class Enemy_Assassin : Enemy
         Def = 10;
     }
 
-    private void OnMouseDown()
-    {
-        Debug.Log("HP: " + Hp + " DMG: " + Dmg + " DEF: " + Def + " Class: " + CharacterClass);
-        Attack();
-        Guard();
-    }
-
-    protected override void Attack()
+    public override void Attack()
     {
         Debug.Log("Assassin attack: -" + Dmg + "hp");
         Poison();
     }
 
-    protected override void Guard()
+    public override void Guard()
     {
         Debug.Log("Assasin dodge: enemy missed");
     }

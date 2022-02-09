@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    protected UI_Manager uiManager;
+
     protected int hp = 50;
     public int Hp { get; protected set; }
     protected int dmg = 50; 
@@ -25,12 +27,12 @@ public class Enemy : MonoBehaviour
         } 
     }
 
-    protected virtual void Attack()
+    public virtual void Attack()
     {
         Debug.Log("Generic attack: -" + dmg);
     }
 
-    protected virtual void Guard()
+    public virtual void Guard()
     {
         Debug.Log("Generic guard");
     }

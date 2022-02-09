@@ -13,20 +13,13 @@ public class Enemy_Rogue : Enemy
         Def = 25;      
     }
 
-    private void OnMouseDown()
-    {
-        Debug.Log("HP: " + Hp + " DMG: " + Dmg + " DEF: " + Def + " Class: " + CharacterClass);
-        Attack();
-        Guard();
-    }
-
-    protected override void Attack()
+    public override void Attack()
     {
         Debug.Log("Rogue attack: -" + Dmg + "hp");
         Bleeding();
     }
 
-    protected override void Guard()
+    public override void Guard()
     {
         Debug.Log("Rogue parry: attack parried");
     }

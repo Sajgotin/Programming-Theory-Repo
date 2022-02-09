@@ -13,20 +13,13 @@ public class Enemy_Warrior : Enemy
         Def = 50;
     }
 
-    private void OnMouseDown()
-    {
-        Debug.Log("HP: " + Hp + " DMG: " + Dmg + " DEF: " + Def + " Class: " + CharacterClass);
-        Attack();
-        Guard();
-    }
-
-    protected override void Attack()
+    public override void Attack()
     {
         Debug.Log("Warrior attack: -" + Dmg + "hp");
         Weaken();
     }
 
-    protected override void Guard()
+    public override void Guard()
     {
         Debug.Log("Warrior block: 80% reduced incoming damage");
     }
