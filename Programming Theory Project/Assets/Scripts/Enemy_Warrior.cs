@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Enemy_Warrior : Enemy
 {
     // Start is called before the first frame update
@@ -13,9 +14,11 @@ public class Enemy_Warrior : Enemy
         Def = 50;
     }
 
+    // POLYMORPHISM
     public override void Attack()
     {
         Debug.Log("Warrior attack: -" + Dmg + "hp");
+        // ABSTRACTION
         Weaken();
     }
 

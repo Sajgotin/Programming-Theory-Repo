@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Enemy_Rogue : Enemy
 {
     // Start is called before the first frame update
@@ -13,9 +14,11 @@ public class Enemy_Rogue : Enemy
         Def = 25;      
     }
 
+    // POLYMORPHISM
     public override void Attack()
     {
         Debug.Log("Rogue attack: -" + Dmg + "hp");
+        // ABSTRACTION
         Bleeding();
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Enemy_Assassin : Enemy
 {
     // Start is called before the first frame update
@@ -13,9 +14,11 @@ public class Enemy_Assassin : Enemy
         Def = 10;
     }
 
+    // POLYMORPHISM
     public override void Attack()
     {
         Debug.Log("Assassin attack: -" + Dmg + "hp");
+        // ABSTRACTION
         Poison();
     }
 

@@ -29,10 +29,16 @@ public class UI_Manager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && camera2.isActiveAndEnabled) 
-        {        
-        var ray = camera2.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+        // ABSTRACTION
+        CheckingInput();
+    }
+
+    void CheckingInput()
+    {
+        if (Input.GetMouseButtonDown(0) && camera2.isActiveAndEnabled)
+        {
+            var ray = camera2.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
             if (Physics.Raycast(ray, out hit) && hit.collider.gameObject.CompareTag("Enemy"))
             {
                 //the collider could be children of the unit, so we make sure to check in the parent

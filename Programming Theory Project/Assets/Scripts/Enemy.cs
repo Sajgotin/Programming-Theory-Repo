@@ -13,10 +13,11 @@ public class Enemy : MonoBehaviour
     public int Dmg { get; protected set; }
     protected int def = 50;
     public int Def { get; protected set; }
+    // ENCAPSULATION
     private string characterClass = "class";
     public string CharacterClass {
         get { return characterClass; }
-        set { if (!Regex.IsMatch(value, @"^[a-zA-Z]+$")) 
+        protected set { if (!Regex.IsMatch(value, @"^[a-zA-Z]+$")) 
             {
                 Debug.LogError("You can only use letters in class names");
             }
